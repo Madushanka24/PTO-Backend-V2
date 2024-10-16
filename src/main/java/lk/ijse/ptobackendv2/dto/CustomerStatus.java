@@ -1,2 +1,4 @@
-package lk.ijse.ptobackendv2.dto;public class CustomerStatus {
+package lk.ijse.ptobackendv2.dto;
+
+public interface CustomerStatus {
 }

@@ -1,10 +1,9 @@
 package lk.ijse.ptobackendv2.utill;
 
-import lk.ijse.ptobackendv2.dto.impl.CustomerDto;
-import lk.ijse.ptobackendv2.dto.impl.ItemDto;
-import lk.ijse.ptobackendv2.dto.impl.OrderDto;
+import lk.ijse.ptobackendv2.dto.impl.*;
 import lk.ijse.ptobackendv2.entity.impl.CustomerEntity;
 import lk.ijse.ptobackendv2.entity.impl.ItemEntity;
+import lk.ijse.ptobackendv2.entity.impl.OrderDetailsEntity;
 import lk.ijse.ptobackendv2.entity.impl.OrderEntity;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -47,5 +46,15 @@ public class Mapping {
         return modelMapper.map(orderDto, OrderEntity.class);
     }
 
+    /*order details mapping*/
+    public OrderDetailsEntity toOrderDetailsEntity(OrderDetailsDto orderDetailsDto) {
+        return modelMapper.map(orderDetailsDto, OrderDetailsEntity.class);
+    }
+    public CombinedOrderDto toOrderDetailsDto(OrderDetailsEntity orderDetailsEntity) {
+        return modelMapper.map(orderDetailsEntity, CombinedOrderDto.class);
+    }
+    public List<CombinedOrderDto> toOrderDetailsDtoLists(List<OrderDetailsEntity> orderDetailsEntities) {
+        return modelMapper.map(orderDetailsEntities, new TypeToken<List<CombinedOrderDto>>() {}.getType());
+    }
 
 }

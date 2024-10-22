@@ -6,7 +6,6 @@ import lk.ijse.ptobackendv2.entity.impl.ItemEntity;
 import lk.ijse.ptobackendv2.exception.DataPersistException;
 import lk.ijse.ptobackendv2.exception.ItemNotFoundException;
 import lk.ijse.ptobackendv2.service.ItemService;
-import lk.ijse.ptobackendv2.uill.Mapping;
 import lk.ijse.ptobackendv2.utill.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

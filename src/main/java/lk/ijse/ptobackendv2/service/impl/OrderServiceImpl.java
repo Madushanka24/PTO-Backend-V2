@@ -15,7 +15,6 @@ import lk.ijse.ptobackendv2.exception.ItemNotFoundException;
 import lk.ijse.ptobackendv2.exception.OrderNotFoundException;
 import lk.ijse.ptobackendv2.service.ItemService;
 import lk.ijse.ptobackendv2.service.OrderService;
-import lk.ijse.ptobackendv2.uill.Mapping;
 import lk.ijse.ptobackendv2.utill.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

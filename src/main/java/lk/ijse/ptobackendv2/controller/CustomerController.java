@@ -1,7 +1,6 @@
 package lk.ijse.ptobackendv2.controller;
 
 import lk.ijse.ptobackendv2.dto.impl.CustomerDto;
-import lk.ijse.ptobackendv2.exception.CustomerNotFoundException;
 import lk.ijse.ptobackendv2.exception.DataPersistException;
 import lk.ijse.ptobackendv2.service.CustomerService;
 import org.slf4j.Logger;

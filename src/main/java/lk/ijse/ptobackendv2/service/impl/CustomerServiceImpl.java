@@ -7,6 +7,7 @@ import lk.ijse.ptobackendv2.exception.CustomerNotFoundException;
 import lk.ijse.ptobackendv2.service.CustomerService;
 import lk.ijse.ptobackendv2.utill.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,7 +27,12 @@ public class CustomerServiceImpl implements CustomerService {
     public void saveCustomer(CustomerDto customerDto) {
         CustomerEntity save = customerDao.save(mapping.toCustomerEntity(customerDto));
         if (save == null) {
-            throw new DataPersistException("Customer not saved");
+            throw new DataAccessException("Customer not saved") {
+                @Override
+                public Throwable getRootCause() {
+                    return super.getRootCause();
+                }
+            };
         }
     }
 
